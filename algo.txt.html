@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>algo.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #ebebeb;}
+</style>
+</head>
+<body bgcolor="#131314">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+algo.txt</font>
+</center></td></tr></table>
+<pre><span class="s0">//</span>
+<span class="s0">// Created by Vitor Frango on 13/11/2022.</span>
+<span class="s0">//</span>
+<span class="s0">/*</span>
+
+ <span class="s0">Algoritmo de cifra simetrica</span>
+ <span class="s0">EFolioA - Segurança de redes e computadores</span>
+
+ <span class="s0">1 - Pedir uma mensagem e guardar numa array</span>
+ <span class="s0">2 - cifrar a  mensagem atraves de uma qualquer formula matematica ((2022*11)/30^2) aplicada ao correspondente</span>
+    <span class="s0">codigo ASCII de cada caracter introduzido</span>
+ <span class="s0">3 - imprimir o resultado da formula aplicada a cada caracter</span>
+ <span class="s0">4 - Pedir para introduzir o codigo que devera reverter a cifra para a mensagem original</span>
+ <span class="s0">5 - Imprimir a mensagem original</span>
+<span class="s0">*/</span>
+
+
+<span class="s0">#include&lt;stdio.h&gt;</span>
+<span class="s0">#include&lt;string.h&gt;</span>
+
+
+<span class="s0">int main(){</span>
+    <span class="s0">char  mesg[999];</span>
+    <span class="s0">int   mensagem_cifra[999];</span>
+    <span class="s0">int   tama_msg;</span>
+
+
+
+    <span class="s0">//pede ao user uma mensagem e grava</span>
+    <span class="s0">printf(&quot;\n Escreva a mensagem (até 999 caracteres) a ser cifrada: \n &quot;);</span>
+    <span class="s0">scanf(&quot;%[^\n]&quot;, &amp;mesg);</span>
+
+    <span class="s0">// Avalia o tamanho da mensagem e percorre a string onde a mesma esta gravada</span>
+    <span class="s0">// aplicando a cada caracter  una formula no seu  correspondente codigo ASCII</span>
+    <span class="s0">tama_msg = strlen(mesg);</span>
+    <span class="s0">for(int i=0; i&lt;tama_msg; i++){</span>
+        <span class="s0">mensagem_cifra[i] = (mesg[i])*((2022*11)/30^2);</span>
+    <span class="s0">}</span>
+
+    <span class="s0">// volta a percorrer a string para inprimir a mensagme mas no seu correspondente</span>
+    <span class="s0">// codigo ASCII apos aplicaa uma formula</span>
+    <span class="s0">printf (&quot; A sua mensagem cifrada é: \n &quot;);</span>
+    <span class="s0">for(int i=0; i&lt;tama_msg; i++)</span>
+        <span class="s0">printf(&quot;  %d &quot;, mensagem_cifra[i]);</span>
+
+
+    <span class="s0">//reverte a mensagem cifrada efectuando o processo inverso , pedindo para esse efeito</span>
+    <span class="s0">// a introdução do codigo gerando anteriormente</span>
+
+    <span class="s0">printf(&quot;\n Digite o codigo para reverter a cifra:\n&quot;);</span>
+    <span class="s0">for(int i=0; i&lt;tama_msg; i++)</span>
+        <span class="s0">scanf(&quot;%d[^\n] &quot;,&amp;mensagem_cifra[i]);</span>
+
+
+    <span class="s0">for(int i=0;i&lt;tama_msg;i++)</span>
+    <span class="s0">{</span>
+        <span class="s0">mesg[i] = (int)(mensagem_cifra[i])/((2022*11)/30^2);</span>
+    <span class="s0">}</span>
+
+    <span class="s0">printf(&quot;\n A mensagem original é :\n %s \n&quot;, mesg);</span>
+
+
+    <span class="s0">return 0;</span>
+<span class="s0">}</span></pre>
+</body>
+</html>

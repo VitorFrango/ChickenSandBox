@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>cmake_install.cmake.tmp4c479</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #ebebeb;}
+</style>
+</head>
+<body bgcolor="#131314">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+cmake_install.cmake.tmp4c479</font>
+</center></td></tr></table>
+<pre><span class="s0"># Install script for directory: /Users/vitorfrango/Library/CloudStorage/OneDrive-Personal/programacao/c/ChickenSandBox/SRC</span>
+
+<span class="s0"># Set the install prefix</span>
+<span class="s0">if(NOT DEFINED CMAKE_INSTALL_PREFIX)</span>
+  <span class="s0">set(CMAKE_INSTALL_PREFIX &quot;/usr/local&quot;)</span>
+<span class="s0">endif()</span>
+<span class="s0">string(REGEX REPLACE &quot;/$&quot; &quot;&quot; CMAKE_INSTALL_PREFIX &quot;${CMAKE_INSTALL_PREFIX}&quot;)</span>
+
+<span class="s0"># Set the install configuration name.</span>
+<span class="s0">if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)</span>
+  <span class="s0">if(BUILD_TYPE)</span>
+    <span class="s0">string(REGEX REPLACE &quot;^[^A-Za-z0-9_]+&quot; &quot;&quot;</span>
+           <span class="s0">CMAKE_INSTALL_CONFIG_NAME &quot;${BUILD_TYPE}&quot;)</span>
+  <span class="s0">else()</span>
+    <span class="s0">set(CMAKE_INSTALL_CONFIG_NAME &quot;Debug&quot;)</span>
+  <span class="s0">endif()</span>
+  <span class="s0">message(STATUS &quot;Install configuration: \&quot;${CMAKE_INSTALL_CONFIG_NAME}\&quot;&quot;)</span>
+<span class="s0">endif()</span>
+
+<span class="s0"># Set the component getting installed.</span>
+<span class="s0">if(NOT CMAKE_INSTALL_COMPONENT)</span>
+  <span class="s0">if(COMPONENT)</span>
+    <span class="s0">message(STATUS &quot;Install component: \&quot;${COMPONENT}\&quot;&quot;)</span>
+    <span class="s0">set(CMAKE_INSTALL_COMPONENT &quot;${COMPONENT}&quot;)</span>
+  <span class="s0">else()</span>
+    <span class="s0">set(CMAKE_INSTALL_COMPONENT)</span>
+  <span class="s0">endif()</span>
+<span class="s0">endif()</span>
+
+<span class="s0"># Is this installation the result of a crosscompile?</span>
+<span class="s0">if(NOT DEFINED CMAKE_CROSSCOMPILING)</span>
+  <span class="s0">set(CMAKE_CROSSCOMPILING &quot;FALSE&quot;)</span>
+<span class="s0">endif()</span>
+
+<span class="s0"># Set default install directory permissions.</span>
+<span class="s0">if(NOT DEFINED CMAKE_OBJDUMP)</span>
+  <span class="s0">set(CMAKE_OBJDUMP &quot;/Library/Developer/CommandLineTools/usr/bin/objdump&quot;)</span>
+<span class="s0">endif()</span>
+
+<span class="s0">if(CMAKE_INSTALL_COMPONENT)</span>
+  <span class="s0">set(CMAKE_INSTALL_MANIFEST &quot;install_manifest_${CMAKE_INSTALL_COMPONENT}.txt&quot;)</span>
+<span class="s0">else()</span>
+  <span class="s0">set(CMAKE_INSTALL_MANIFEST &quot;install_manifest.txt&quot;)</span>
+<span class="s0">endif()</span>
+
+<span class="s0">string(REPLACE &quot;;&quot; &quot;\n&quot; CMAKE_INSTALL_MANIFEST_CONTENT</span>
+       <span class="s0">&quot;${CMAKE_INSTALL_MANIFEST_FILES}&quot;)</span>
+<span class="s0">file(WRITE &quot;/Users/vitorfrango/Library/CloudStorage/OneDrive-Personal/programacao/c/ChickenSandBox/SRC/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}&quot;</span>
+     <span class="s0">&quot;${CMAKE_INSTALL_MANIFEST_CONTENT}&quot;)</span>
+</pre>
+</body>
+</html>

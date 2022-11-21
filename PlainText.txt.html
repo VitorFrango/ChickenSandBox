@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>PlainText.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #ebebeb;}
+</style>
+</head>
+<body bgcolor="#131314">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+PlainText.txt</font>
+</center></td></tr></table>
+<pre><span class="s0">#include&lt;stdio.h&gt;</span>
+ 
+<span class="s0">int main()</span>
+<span class="s0">{</span>
+<span class="s0">char message[100], ch;</span>
+<span class="s0">int i, key;</span>
+<span class="s0">printf(&quot;Enter a message to decrypt: &quot;);</span>
+<span class="s0">gets(message);</span>
+<span class="s0">printf(&quot;Enter key: &quot;);</span>
+<span class="s0">scanf(&quot;%d&quot;, &amp;key);</span>
+<span class="s0">for(i = 0; message[i] != '\0'; ++i){</span>
+<span class="s0">ch = message[i];</span>
+<span class="s0">if(ch &gt;= 'a' &amp;&amp; ch &lt;= 'z'){</span>
+<span class="s0">ch = ch - key;</span>
+<span class="s0">if(ch &lt; 'a'){</span>
+<span class="s0">ch = ch + 'z' - 'a' + 1;</span>
+<span class="s0">}</span>
+<span class="s0">message[i] = ch;</span>
+<span class="s0">}</span>
+<span class="s0">else if(ch &gt;= 'A' &amp;&amp; ch &lt;= 'Z'){</span>
+<span class="s0">ch = ch - key;</span>
+<span class="s0">if(ch &lt; 'A'){</span>
+<span class="s0">ch = ch + 'Z' - 'A' + 1;</span>
+<span class="s0">}</span>
+<span class="s0">message[i] = ch;</span>
+<span class="s0">}</span>
+<span class="s0">}</span>
+<span class="s0">printf(&quot;Decrypted message: %s&quot;, message);</span>
+<span class="s0">return 0;</span>
+<span class="s0">}</span></pre>
+</body>
+</html>
